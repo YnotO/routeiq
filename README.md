@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![ReadMeSupportPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-project.svg)](https://s.id/standwithpalestine)
 
 # PHPNuxBill - PHP Mikrotik Billing
@@ -109,6 +110,11 @@ We appreciate all people who are participating in this project.
 <a href="https://github.com/hotspotbilling/phpnuxbill/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hotspotbilling/phpnuxbill" />
 </a>
+=======
+# RouteIQ
+A Laravel-based platform for ISPs to manage Hotspot, PPPoE, and Static IP users with automated billing, M-Pesa integration, real-time monitoring, and analytics. It offers user-friendly dashboards, self-service portals, and secure role-based access, streamlining network management and service delivery.
+ Inspired by PHPNUXBILL
+>>>>>>> 025073f50a8c84119c517d5a83ae8284ef0aff85
 =======
 # RouteIQ
 A Laravel-based platform for ISPs to manage Hotspot, PPPoE, and Static IP users with automated billing, M-Pesa integration, real-time monitoring, and analytics. It offers user-friendly dashboards, self-service portals, and secure role-based access, streamlining network management and service delivery.
