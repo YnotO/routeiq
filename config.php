@@ -11,14 +11,14 @@ $_app_stage = "Live";
 // Database PHPNuxBill
 $db_host	    = "localhost";
 $db_user        = "root";
-$db_pass    	= "YnotRoute";
-$db_name	    = "YnotRoute";
+$db_pass    	= "";
+$db_name	    = "nexwave";
 
 // Database Radius
 $radius_host	    = "localhost";
 $radius_user        = "root";
-$radius_pass    	= "YnotRoute";
-$radius_name	    = "YnotRoute";
+$radius_pass    	= "";
+$radius_name	    = "nexwave";
 
 if($_app_stage!="Live"){
     error_reporting(E_ERROR);

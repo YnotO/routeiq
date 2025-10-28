@@ -1,15 +1,46 @@
-{include file="sections/header.tpl"}
+<?php
+/* Smarty version 4.5.3, created on 2025-10-28 17:55:21
+  from 'C:\xampp\htdocs\routeiq\ui\ui\admin\maps\routers.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.5.3',
+  'unifunc' => 'content_6900d959df19a1_68964621',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '174ccf667eea570125ac1d7d7984bc4c3932e270' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\routeiq\\ui\\ui\\admin\\maps\\routers.tpl',
+      1 => 1761663307,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:sections/header.tpl' => 1,
+    'file:pagination.tpl' => 1,
+    'file:sections/footer.tpl' => 1,
+  ),
+),false)) {
+function content_6900d959df19a1_68964621 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:sections/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <!-- Search form -->
-<form id="site-search" method="post" action="{Text::url('')}routers/maps">
+<form id="site-search" method="post" action="<?php echo Text::url('');?>
+routers/maps">
     <input type="hidden" name="_route" value="routers/maps">
     <div class="input-group mb-3">
         <div class="input-group-addon">
             <span class="fa fa-search"></span>
         </div>
-        <input type="text" name="name" class="form-control" value="{$name}" placeholder="{Lang::T('Search')}...">
+        <input type="text" name="name" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+" placeholder="<?php echo Lang::T('Search');?>
+...">
         <div class="input-group-btn">
-            <button class="btn btn-success" type="submit">{Lang::T('Search')}</button>
+            <button class="btn btn-success" type="submit"><?php echo Lang::T('Search');?>
+</button>
         </div>
     </div>
 </form>
@@ -17,7 +48,8 @@
 <!-- Map container -->
 <div id="map" class="well" style="width: 100%; height: 75vh; margin: 20px auto;"></div>
 
-{include file="pagination.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:pagination.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <!-- Modal for adding a new device -->
 <div class="modal fade" id="addDeviceModal" tabindex="-1" role="dialog" aria-labelledby="addDeviceModalLabel">
@@ -51,8 +83,9 @@
   </div>
 </div>
 
-{literal}
-<script>
+
+<?php echo '<script'; ?>
+>
 let map, marker, currentLat, currentLng;
 
 // Initialize map
@@ -79,7 +112,8 @@ function setupMap(lat, lng) {
   }).addTo(map);
 
   // Load existing routers from backend
-  const routers = {/literal}{$d|json_encode}{literal};
+  const routers = <?php echo json_encode($_smarty_tpl->tpl_vars['d']->value);?>
+;
   routers.forEach(function(router) {
     const coords = router.coordinates ? router.coordinates.split(',') : null;
     if (coords) {
@@ -150,7 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize the map when page loads
 window.onload = initMap;
-</script>
-{/literal}
+<?php echo '</script'; ?>
+>
 
-{include file="sections/footer.tpl"}
+
+<?php $_smarty_tpl->_subTemplateRender("file:sections/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
